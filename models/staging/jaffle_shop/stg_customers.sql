@@ -5,7 +5,7 @@ with customers as (
         first_name,
         last_name
 
-    from dbt-tutorial.jaffle_shop.customers
+    from datatonic-analytics-sandbox.jaffle_shop.customers
 
 )
 select * from customers

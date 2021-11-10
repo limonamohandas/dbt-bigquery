@@ -6,7 +6,7 @@ with orders as (
         order_date,
         status
 
-    from dbt-tutorial.jaffle_shop.orders
+    from datatonic-analytics-sandbox.jaffle_shop.orders
 
 )
 select * from orders
