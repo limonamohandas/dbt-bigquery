@@ -6,7 +6,7 @@ with orders as (
         order_date,
         status
 
-    from datatonic-analytics-sandbox.jaffle_shop.orders
+    from {{ source('jaffle_shop', 'orders') }}
 
 )
 select * from orders
