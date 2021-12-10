@@ -7,5 +7,13 @@ with customers as (
 
     from {{ source('jaffle_shop', 'customers') }}
 
+),
+employees as (
+    
+    select * from {{ ref('employees') }}
 )
-select * from customers
+select
+    *, 
+    employees.employee_id is not null as is_employee 
+from customers
+left join employees using (customer_id)
